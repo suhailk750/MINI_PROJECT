@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body><center><h1>CRIMINAL LIST</h1>
+<table border="1">
+	<tr>
+		<th>CRIMINAL NAME</th>
+		<th>AGE</th>
+		<th>DISTRICT</th>
+		<th>PHOTO</th>
+	</tr>
+    {% for i in x %}
+	<tr>
+		<td>{{ i.name }}</td>
+		<td>{{ i.age }}</td>
+		<td>{{ i.location }}</td>
+		<td>{{ i.photo }}</td>
+		
+	</tr>
+	{% endfor %}
+</table>
+</body>
+</html>
