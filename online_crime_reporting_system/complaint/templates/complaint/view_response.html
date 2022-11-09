@@ -1,4 +1,4 @@
-{% extends 'temp/admin.html' %}
+{% extends 'temp/police.html' %}
 {% block base %}
 <!DOCTYPE html>
 <html>
@@ -10,14 +10,14 @@
 <body><center><h1>CRIME REPORT</h1><BR><br><br>
 <table border="1">
 	<tr>
-		<th>NAME</th>
+        <th>NAME</th>
 		<th>PHONE</th>
 		<th>LOCATION</th>
 		<TH>COMPLAINT</TH>
 		<th>PHOTO</th>
 		<th>DATE</th>
 		<th>TIME</th>
-        <th>REPLY</th>
+        <th>STATUS</th>
 	</tr>
     {% for i in x %}
 	<tr>
@@ -28,8 +28,9 @@
 		<td><img src="/static/{{ i.photo }}" height="50" width="50"></td>
 		<td>{{ i.date }}</td>
 		<td>{{ i.time }}</td>
+        <td>{{ i.status }}</td>
 
-		<td><a href="/complaint/ rjt/{{ i.c_id }}">VERIFY</a></td>
+		<td><a href="{% url 'rs' idd=i.c_id %}">RESPONSE</a></td>
 	</tr>
     {% endfor %}
 

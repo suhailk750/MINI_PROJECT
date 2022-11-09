@@ -12,6 +12,17 @@ def emnump(request):
 
     return render(request,'emergency_number/EMERGENCY_NO.HTML')
 
+def emnumpolice(request):
+    if request.method == "POST":
+        ob=EmergencyNumber()
+        ob.name=request.POST.get('username')
+        ob.phone=request.POST.get('PHONE')
+        ob.save()
+
+
+    return render(request,'emergency_number/emergency_no_police.html')
+
+
 def emnumview(request):
     obj = EmergencyNumber.objects.all()
     context = {

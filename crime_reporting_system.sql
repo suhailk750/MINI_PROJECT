@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2022 at 04:48 AM
+-- Generation Time: Oct 25, 2022 at 08:52 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -45,8 +45,10 @@ CREATE TABLE `complaint` (
 --
 
 INSERT INTO `complaint` (`c_id`, `user_id`, `name`, `phone`, `location`, `complaint`, `photo`, `date`, `time`, `reply`, `status`) VALUES
-(1, 1, 'shabeeb', 123456789, 'kozhikode', 'fgnbgbdrgf', 'Screenshot.png', '2022-10-08', '13:17:00', 'pending', 'verify'),
-(2, 1, 'shabeeb', 123456789, 'kozhikode', 'murder', 'Screenshot.png', '2022-10-12', '12:23:00', 'pending', 'pending');
+(1, 1, 'shabeeb', 123456789, 'kozhikode', 'fgnbgbdrgf', 'Screenshot.png', '2022-10-08', '13:17:00', 'pending', 'verified'),
+(2, 1, 'shabeeb', 123456789, 'kozhikode', 'murder', 'Screenshot.png', '2022-10-12', '12:23:00', 'pending', 'verified'),
+(3, 1, 'shabeeb', 789900998, 'kozhikode', 'gg', 'Screenshot.png', '2022-09-30', '11:48:00', 'okda', 'verified'),
+(4, 1, 'SHABEER', 5678900, 'kozhikode', 'murder', 'Screenshot.png', '2022-10-28', '12:20:00', 'okkk', 'verified');
 
 -- --------------------------------------------------------
 
@@ -68,7 +70,8 @@ CREATE TABLE `criminal_list` (
 
 INSERT INTO `criminal_list` (`cl_id`, `name`, `age`, `location`, `photo`) VALUES
 (1, 'arif', 23, 'malprm', 'Screenshot.png'),
-(2, 'arif', 23, 'malprm', 'Screenshot.png');
+(2, 'arif', 23, 'malprm', 'Screenshot.png'),
+(3, 'arif', 55, 'malprm', 'Screenshot.png');
 
 -- --------------------------------------------------------
 
@@ -137,7 +140,8 @@ CREATE TABLE `missing_person` (
 INSERT INTO `missing_person` (`ml_id`, `name`, `age`, `address`, `gender`, `photo`) VALUES
 (1, 'arif', 23, 'meenarkuzhi', 'male', 'Screenshot.png'),
 (2, 'shabeeb', 23, 'meenarkuzhi', 'male', 'Screenshot.png'),
-(3, 'shabeer', 22, 'meenarkuzhi', 'male', 'Screenshot.png');
+(3, 'shabeer', 22, 'meenarkuzhi', 'male', 'Screenshot.png'),
+(4, 'arif', 12, 'meenarkuzhi', 'male', 'Screenshot.png');
 
 -- --------------------------------------------------------
 
@@ -248,12 +252,12 @@ ALTER TABLE `user_registration`
 -- AUTO_INCREMENT for table `complaint`
 --
 ALTER TABLE `complaint`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `criminal_list`
 --
 ALTER TABLE `criminal_list`
-  MODIFY `cl_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `cl_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `emergency_number`
 --
@@ -273,7 +277,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `missing_person`
 --
 ALTER TABLE `missing_person`
-  MODIFY `ml_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ml_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `police_registration`
 --

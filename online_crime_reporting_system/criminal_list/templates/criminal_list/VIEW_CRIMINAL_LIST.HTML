@@ -1,3 +1,5 @@
+{% extends 'temp/user.html' %}
+{% block base %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,10 +20,11 @@
 		<td>{{ i.name }}</td>
 		<td>{{ i.age }}</td>
 		<td>{{ i.location }}</td>
-		<td>{{ i.photo }}</td>
+		<td><img src="/static/{{ i.photo }}" height="50" width="50"></td>
 		
 	</tr>
 	{% endfor %}
 </table>
 </body>
 </html>
+{% endblock %}

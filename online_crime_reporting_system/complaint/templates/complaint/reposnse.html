@@ -1,4 +1,4 @@
-{% extends 'temp/admin.html' %}
+{% extends 'temp/police.html' %}
 {% block base %}
 <!DOCTYPE html>
 <html>
@@ -7,23 +7,18 @@
 </head>
 <body>
 <center>
-	<h1>EMERGENCY NUMBER</h1>
+	<h1>POST RESPONSE</h1>
 	<form method="POST">
         {% csrf_token %}
-		<table cellpadding="5" cellspacing="5"> 
-			<tr>
-				
-				<th>NAME</th><td><input type="text" name="username">
-				</td>
+		<table cellpadding="5" cellspacing="5">
 			</tr>
 			<tr>
-				<th>PHONE</th>
-				<td><input type="number" name="PHONE">
+				<th>Response</th>
+				<td><textarea name="response"></textarea>
 				</td>
 			</tr>
-			
-			<tr><th></th>
-				
+            <tr><th></th>
+
 				<td>
 				<input type="submit" name="button" value="ADD" ></td>
 			</tr>
